@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-//Converter this reps info
+//Converter is a Bi-Directional unit converter
 type Converter struct {
 }
 
@@ -47,19 +47,19 @@ func (cvr Converter) MillisecondsToSeconds(m Milliseconds) Seconds {
 	return Seconds(m / 1000)
 }
 
-func (cvr Converter) CelciusToFahrenheit(c Celcius) Fahrenheit {//(0°C × 9/5) + 32 
+func (cvr Converter) CelciusToFahrenheit(c Celcius) Fahrenheit { //(0°C × 9/5) + 32
 	return Fahrenheit((c * (9.0 / 5)) + 32)
 }
 
-func (cvr Converter) FahrenheitToCelcius(f Fahrenheit) Celcius {//(0°F − 32) × 5/9
+func (cvr Converter) FahrenheitToCelcius(f Fahrenheit) Celcius { //(0°F − 32) × 5/9
 	return Celcius((f - 32) * (5.0 / 9))
 }
 
-func (cvr Converter) RadianToDegree(r Radian) Degree {//1rad × 180/π
+func (cvr Converter) RadianToDegree(r Radian) Degree { //1rad × 180/π
 	return Degree(r * (180 / PI))
 }
 
-func (cvr Converter) DegreeToRadian(d Degree) Radian {//1° × π/180
+func (cvr Converter) DegreeToRadian(d Degree) Radian { //1° × π/180
 	return Radian(d * (PI / 180))
 }
 
